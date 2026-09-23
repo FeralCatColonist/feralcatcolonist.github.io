@@ -1,0 +1,66 @@
+---
+layout: page
+title: Presentations & Videos
+description: Conference talks and presentations.
+background: '/img/bg-post.jpg'
+---
+
+<style>
+.video-entry {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+.video-entry:last-child {
+  border-bottom: none;
+}
+.video-meta {
+  color: #868e96;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
+
+<!--
+  HOW TO ADD A VIDEO
+  ==================
+  1. Copy one of the <div class="video-entry"> blocks below.
+  2. Update: title, conference, year, description, and VIDEO_ID.
+  3. Get the VIDEO_ID from the YouTube URL:
+       https://www.youtube.com/watch?v=VIDEO_ID
+-->
+
+<div class="video-entry">
+  <h3>Talk Title Goes Here</h3>
+  <p class="video-meta">Conference Name &middot; 2024</p>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+            allowfullscreen></iframe>
+  </div>
+  <p>One or two sentences about the talk. What it covers, who it's for, or any notable context.</p>
+</div>
+
+<div class="video-entry">
+  <h3>Talk Title Goes Here</h3>
+  <p class="video-meta">Conference Name &middot; 2023</p>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+            allowfullscreen></iframe>
+  </div>
+  <p>One or two sentences about the talk.</p>
+</div>
