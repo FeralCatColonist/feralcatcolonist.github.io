@@ -1,25 +1,22 @@
 ---
 layout: post
 title: "PSA: Your ArcPy Might be Broken"
-subtitle: "I went with the clickbait title this time."
+subtitle: "I went with the clickbait title this time"
 date: 2023-11-08
-background: '/img/posts/2023-01-08-logo-anaconda-esri.png'
+background: '/img/posts/2023-11-08-logo-anaconda-esri.png'
 ---
-## The less sensational title might be: *ArcPy Minor Upgrades are a Minor Headache.*
+## The less sensational title might be:
+### *ArcPy Minor Upgrades are a Minor Headache.*
 
-Two years ago I wrote [a long article](/_posts/2021-03-19-standalone-arcgis-conda.md) on how to create a standalone ArcPy environment; normally, I'd say it is worth a read but its probably out of date. I've seen a few more articles since then covering the same subject matter so I'm hoping that this a more common practice. Why am I writing this? Yesterday, Esri released a new minor update to ArcGIS Pro from `3.1.x` to `3.2.0` and judging from the **What's New** page this is one of the more feature-rich releases to the software since `2.7.x`.
+Two years ago I wrote [a long article](/2021-03-19-standalone-arcgis-conda.html) on how to create a standalone ArcPy environment; normally, I'd say it is worth a read but its probably out of date. I've seen a few more articles since then covering the same subject matter so I'm hoping that this a more common practice. Why am I writing this? Yesterday, Esri released a new minor update to ArcGIS Pro from `3.1.x` to `3.2.0` and judging from the **What's New** page this is one of the more feature-rich releases to the software since `2.7.x`.
 
-
-Article content
+[![a screenshot of the top of the documentation linked below](/img/posts/2023-11-08-doc-snippet-esri-01.png)](/img/posts/2023-11-08-doc-snippet-esri-01.png)
 https://pro.arcgis.com/en/pro-app/latest/get-started/whats-new-in-arcgis-pro.htm
-
 
 With a new minor release comes new binaries, meaning that any Conda environments created within the ArcGIS Pro GUI or ArcPy installations created in a standalone fashion need to be freshly installed. You'll know if this happens when you see an error like this:
 
-
-Article content
-A Conda error showing that an ArcPy version tied to ArcGIS Pro 3.1.x will not work with an ArcGIS Pro 3.2.x installation.
-
+[![A Conda error showing that an ArcPy version tied to ArcGIS Pro 3.1.x will not work with an ArcGIS Pro 3.2.x installation.](/img/posts/2023-11-08-cmd-snippet-01.png)](/img/posts/2023-11-08-cmd-snippet-01.png)
+*A Conda error showing that an ArcPy version tied to ArcGIS Pro 3.1.x will not work with an ArcGIS Pro 3.2.x installation.*
 
 Normally one could just run a command like:
 
@@ -30,9 +27,8 @@ conda update some-library
 Because of the binary situation above, this does not work with the ArcPy library. We have two options for removing and re-installing ArcPy which I'll cover. Esri has a convenience feature for "upgrading" your ArcPy environment; however, the actual mechanism works like this:
 
 
-Article content
-This update process deletes the environment... ...and re-creates it | 
-
+[![a screenshot of the esri documentation outlining the upgrade process](/img/posts/2023-11-08-doc-snippet-esri-02.png)](/img/posts/2023-11-08-doc-snippet-esri-02.png)
+*This update process deletes the environment... ...and re-creates it *
 
 If you are using ArcPy in a standalone kernel for Python, and you have, or are planning to, install the new minor release update (3.2) to ArcGIS Pro you will need to reinstall ArcPy in your Conda environment. Let's look at a few options that you have for performing the reinstall; we'll imagine a few different scenarios.
 
@@ -47,7 +43,7 @@ conda install -c esri arcpy
 
 The first line creates the environment, you'll need to press the "y" key and then the "enter" key to complete the installation. The second line will activate this new environment. The third line installs ArcPy and all of its related packages into it, this also includes the ArcGIS API for Python.
 
-https://anaconda.org/esri/arcpy
+[https://anaconda.org/esri/arcpy](https://anaconda.org/esri/arcpy)
 
 ## Scenario 1 - A Simple Scenario
 I just installed ArcPy and nothing else. Congratulations! You can remove and re-install ArcPy without thinking about it too hard.
@@ -86,3 +82,5 @@ conda install -c esri arcpy
 Your syntax will likely be different depending on the number if libraries you need to include and in what order of installation those happened.
 
 And it's kind of that easy. Admittedly, not as easy as upgrading a library with the update command but such is the life of a licensed software library.
+
+[![a screenshot of the top of the documentation linked below](/img/posts/2023-11-08-logo-anaconda-esri.png)](/img/posts//img/posts/2023-11-08-logo-anaconda-esri.png)

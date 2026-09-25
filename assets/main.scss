@@ -4,6 +4,53 @@
 @import "styles";
 @import "syntax";
 
+body {
+  background-color: #fff;
+  background-image: url('/img/river-bg.svg');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: center top;
+}
+
+header.masthead .site-heading {
+  padding: 30px 0 15px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 40px 0;
+  }
+}
+
+header.masthead .page-heading {
+  padding: 30px 0 15px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 40px 0;
+  }
+}
+
+header.masthead .post-heading {
+  padding: 30px 0 15px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 40px 0;
+  }
+}
+
+article.post-preview--has-bg {
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+
+  .post-preview__inner {
+    position: relative;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 1.25rem 1.5rem;
+    border-radius: 4px;
+  }
+}
+
 .post-content img {
   max-width: 100%;
   height: auto;

@@ -51,6 +51,8 @@ And on top that, you still need to prune your old backup copies. Unless storage 
 ## Two Levels
 This is where I had a moment of clarity. What I really wanted.
 
+[!["a still from the movie inception, texas has been added to say, a command line within a commandline. two levels."](/img/posts//img/posts/2024-12-18-cli-ception.jpg)](/img/posts//img/posts/2024-12-18-cli-ception.jpg)
+
 And it wasn't 6 files (3 `.bat` files and their 3 corresponding `.properties` files). 
 
 It was a single file that I could schedule and then never worry about disaster recovery again... ...you know, except if disaster were to strike... ...and obviously a bi-annual disaster recovery exercise because you don't want your first time testing your disaster recovery option to be when you actually have to use it to continue business operations.
@@ -164,7 +166,7 @@ spacer = "-" * 50
 
 Finally we're at the primary three functions. Here's `prune_copies()`. 
 
-- We create a list of paths from the directory indicated by the constant `WebGISDR_backups_path`, where the backup matches our user input (using dot notation from our argument names that we defined in the configure function). All backup copies look like: `yyyymmdd-hhmmss-TYPE.webgissite` with this in mind, we can run a wildcard (*) string search to grab anything that matches our TYPE
+- We create a list of paths from the directory indicated by the constant `WebGISDR_backups_path`, where the backup matches our user input (using dot notation from our argument names that we defined in the configure function). All backup copies look like: `yyyymmdd-hhmmss-TYPE.webgissite` with this in mind, we can run a wildcard (*) string search to grab anything that matches our `TYPE`
 - Sort the list in descending order, this means that oldest copies are at the end
 - Create another list through a list comprehension so that we can have a pretty output that only includes file names
 - Create a list of backups to be retained by slicing the sorted list according to our user input
@@ -196,7 +198,7 @@ def prune_copies(webgisdr_backups_path: Path, backup_arguments: argparse.Namespa
 Next we're setting the parameter of the `webgisdr.properties` file to match the user input type in the appropriately named `set_WebGISDR()` function.
 
 - We create a `Path` to the file
-- Read in the file as a string
+- Read in the file as a `string`
 - Create a list of strings where each item is a new line
 - Iterate through the lines and find the line with the parameter `BACKUP_RESTORE_MODE`. Replace this list item with a string that utilizes our user input
 - Write the list of strings as string using a new line joiner
@@ -227,8 +229,7 @@ Lastly, we just need to run the standard WebGIS DR tool in the function `run_Web
 - Craft a string that will be used in the `subprocess.run()` function, this is analagous to opening a command prompt terminal
 - Run the `webgisdr` command
 
-Python code describing the run_WebGISDR() function:
-
+*Python code describing the `run_WebGISDR()` function:*
 ```python
 def run_WebGISDR(webgisdr_dir: Path, webgisdr_filename: str):
     """Runs the WebGISDR command-line utility
@@ -249,12 +250,8 @@ def run_WebGISDR(webgisdr_dir: Path, webgisdr_filename: str):
 
 And that's it. A fairly painless automation for setting and forgetting an out-of-the-box disaster recovery solution. When it runs it looks like this:
 
-
-A terminal output from the running of the WebGISDR CLI wrapper
-
-
+[!["A terminal output from the running of the WebGISDR CLI wrapper"](/img/posts/2024-12-18-cmd-snippet-02.png)](/img/posts/2024-12-18-cmd-snippet-02.png)
 *terminal output when run*
 
 If you'd like to use it in your own deployment you can find it on my GitHub here:
-
-https://github.com/FeralCatColonist/Spatial-Grimoire/blob/main/WebGISDR-cli-wrapper.py
+[https://github.com/FeralCatColonist/Spatial-Grimoire/blob/main/WebGISDR-cli-wrapper.py](https://github.com/FeralCatColonist/Spatial-Grimoire/blob/main/WebGISDR-cli-wrapper.py)
