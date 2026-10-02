@@ -1,0 +1,19 @@
+---
+title: "Presentations & Videos"
+subtitle: "Conference talks and presentations."
+title-block-banner: true
+---
+
+<!--
+HOW TO ADD A VIDEO
+Copy this block, uncomment it, and paste the full YouTube URL into the video shortcode:
+
+## Talk Title Goes Here
+
+Conference Name · 2024
+
+{{</* video https://www.youtube.com/watch?v=VIDEO_ID */>}}
+(when you uncomment, delete the /* and */ inside the braces)
+
+One or two sentences about the talk.
+-->

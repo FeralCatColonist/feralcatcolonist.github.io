@@ -1,0 +1,47 @@
+project:
+  type: website
+  render:
+    - index.qmd
+    - about.qmd
+    - videos.qmd
+    - 404.qmd
+    - posts/*/index.md
+  resources:
+    - img/
+  post-render: scripts/copy-feed.py
+
+website:
+  title: "The Feral Cat Colonist"
+  description: "Uncommon Commentary, the PNW, and Spatial Perspectives"
+  site-url: https://feralcatcolonist.github.io
+  favicon: favicon.svg
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - about.qmd
+      - videos.qmd
+    right:
+      - icon: rss
+        href: index.xml
+        aria-label: RSS feed
+      - icon: github
+        href: https://github.com/feralcatcolonist
+        aria-label: GitHub
+      - icon: twitter-x
+        href: https://twitter.com/feralcatcolonist
+        aria-label: Twitter
+  page-footer:
+    center: "© The Feral Cat Colonist"
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles/common.scss, styles/light.scss]
+      dark: [cosmo, styles/common.scss, styles/dark.scss]
+    respect-user-color-scheme: true
+    highlight-style:
+      light: github-light
+      dark: github-dark
+    lightbox: auto
+    link-external-newwindow: true

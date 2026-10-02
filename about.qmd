@@ -1,0 +1,18 @@
+---
+title: "About"
+aliases:
+  - /contact.html
+about:
+  template: solana
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/feralcatcolonist
+    - icon: twitter-x
+      text: Twitter
+      href: https://twitter.com/feralcatcolonist
+---
+
+Likes an array of [Cats, Coffee, Gardening, Photography, Ukulele].
+
+<!-- Write your bio here. -->

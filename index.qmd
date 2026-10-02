@@ -1,0 +1,19 @@
+---
+title: "The Feral Cat Colonist"
+subtitle: "Uncommon Commentary, the PNW, and Spatial Perspectives"
+title-block-banner: true
+page-layout: full
+aliases:
+  - /posts/index.html
+listing:
+  contents: posts
+  type: grid
+  sort: "date desc"
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  feed: true
+  page-size: 12
+  image-height: 220px
+  fields: [image, title, categories, description, date]
+---

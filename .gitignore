@@ -1,6 +1,5 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+/.quarto/
+_site/
 WORKING.md
+
+**/*.quarto_ipynb
