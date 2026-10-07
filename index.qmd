@@ -1,6 +1,6 @@
 ---
-title: "The Feral Cat Colonist"
-subtitle: "Uncommon Commentary, the PNW, and Spatial Perspectives"
+title: "a feral cat colonist affiliates"
+subtitle: "a spatial and programming blog"
 title-block-banner: true
 page-layout: full
 aliases:
@@ -13,7 +13,7 @@ listing:
   sort-ui: false
   filter-ui: false
   feed: true
-  page-size: 12
+  page-size: 1000
   image-height: 220px
   fields: [image, title, categories, description, date]
 ---

@@ -11,11 +11,12 @@ project:
   post-render: scripts/copy-feed.py
 
 website:
-  title: "The Feral Cat Colonist"
-  description: "Uncommon Commentary, the PNW, and Spatial Perspectives"
+  title: "writing as affiliative behavior"
+  description: "a spatial and programming blog"
   site-url: https://feralcatcolonist.github.io
   favicon: favicon.svg
   navbar:
+    title: false
     left:
       - text: Home
         href: index.qmd
