@@ -304,9 +304,10 @@ As a closed-source product, we don't **akshually** know what's going on.
 
 We can guess about some things, we can test about some things, and we can get some bits and pieces of understanding based on what features are and are not available. In ArcGIS Pro, we know that the Python.exe is tightly integrated within the product. It's the reason that ArcGIS Notebooks are slow to load. It's the reason why separate ArcGIS Notebooks share all the same variable data within the same ArcGIS Pro session (it's kind of hilarious). It's the reason you can't switch conda environments without re-opening ArcGIS Pro.
 
-And if that conda environment stops working correctly, well, the everything else just stops working too.\
-Some of this is definitely an Esri problem. And some of this is just part of the weakness of conda (which is why it's not the only game in town anymore).\
-We don't often talk about how we have to be cognizant of all the Esri-specific dependencies that ArcGIS Pro has going on. And it's not the most common thing to be a package manager expert (*don't look at me, I am most certainly not*).\
+And if that conda environment stops working correctly, well, the everything else just stops working too.
+
+Some of this is definitely an Esri problem. And some of this is just part of the weakness of conda (which is why it's not the only game in town anymore). We don't often talk about how we have to be cognizant of all the Esri-specific dependencies that ArcGIS Pro has going on. And it's not the most common thing to be a package manager expert (*don't look at me, I am most certainly not*).
+
 So within ArcGIS Pro, the package manager is enforcing the Esri channel to prevent the user from breaking the distribution. In this very specific instance, we end up in a situation where the `conda` version of `rpy2` is incompatible with the version of `R` we downloaded. Although it's really funny to just imagine throwing out a `pip` command like a gladiator throwing sand in their opponent's eyes; and while, mixing your `pip` and `conda` is not best practice, some times, it's the best way.
 :::
 
