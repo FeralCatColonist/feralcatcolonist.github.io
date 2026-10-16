@@ -11,7 +11,7 @@ project:
   post-render: scripts/copy-feed.py
 
 website:
-  title: "writing as affiliative behavior"
+  title: "feral"
   description: "a spatial and programming blog"
   site-url: https://feralcatcolonist.github.io
   favicon: favicon.svg
