@@ -350,7 +350,7 @@ We see a few differences.\
 And maybe, we want to ask why?\
 But we won't.
 
-It's `pip` stuff okay!? There's some API shenanigans that happened around this time in the `rpy2` library. No I haven't tested it in ArcGIS Pro 3.7. I guess I can. Really this is just the never-ending story of, something may or may not be broken in every single version of ArcGIS Pro requiring some kind of hacky money patch to fix.
+It's `pip` stuff okay!? There's some API shenanigans that happened around this time in the `rpy2` library. No I haven't tested it in ArcGIS Pro 3.7. I guess I can. Really this is just the never-ending story of, something may or may not be broken in every single version of ArcGIS Pro requiring some kind of hacky monkey patch to fix.
 
 ### you don't need a license to [copy-paste] a sandwich
 
