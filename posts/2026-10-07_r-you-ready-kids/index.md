@@ -347,8 +347,10 @@ A very careful reading of the above will show that, these paths, are not the con
 `C:\Users\feralcatcolonist\AppData\Local\ESRI\conda\envs\arcgispro-py3-rpy2\Lib\site-packages`
 
 We see a few differences.\
-And maybe, we want to ask why?
+And maybe, we want to ask why?\
 But we won't.
+
+It's `pip` stuff okay!? There's some API shenanigans that happened around this time in the `rpy2` library. No I haven't tested it in ArcGIS Pro 3.7. I guess I can. Really this is just the never-ending story of, something may or may not be broken in every single version of ArcGIS Pro requiring some kind of hacky money patch to fix.
 
 ### you don't need a license to [copy-paste] a sandwich
 
