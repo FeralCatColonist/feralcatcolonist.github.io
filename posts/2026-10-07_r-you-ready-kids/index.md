@@ -130,7 +130,7 @@ If I wasn't concerned about making an obnoxiously long post, then I'd just point
 - <https://www.esri.com/en-us/training/catalog/67fe7b30a930b8d1449f4e28/introduction-to-the-rarcgis-bridge>
 
 Since this is an [exactly how to do the thing article]{.smallcaps}, it behooves me to walk through, uh, exactly how to do the thing.\
-We'll assume you're using ArcGIS Pro on a Windows machine.
+We'll assume you're using ArcGIS Pro 3.5.x on a Windows machine.
 
 ### installing `R`
 You *should* try and source `R` from *CRAN*, The Comprehensive R Archive Network, <https://cran.r-project.org/>, in the parlance of Python, it's kind of like `pip`. There are other ways to source it but we'll stick with this, the most common path.
@@ -169,7 +169,7 @@ it won't be a deal breaker for what we're doing, but if you need that little oom
     - all of these are fine
     - click Next
 
-Whew. Hopefully that took longer for me to type than it took for you to click through. I mean. You read the entire license right? Right!? Anyway. The installer will, uh, install R. It's fairly fast. It'll have you click Finish to exit the setup wizard. Do we still call them wizards?
+Whew. Hopefully that took longer for me to type than it took for you to click through. I mean. You read the entire license right? Right!? Anyway. The installer will, uh, install `R`. It's fairly fast. It'll have you click Finish to exit the setup wizard. Do we still call them wizards?
 
 ![](/img/posts/2026-10-07-a-few-minutes-later.webp){fig-alt="A Few Minutes Later"}
 
@@ -223,9 +223,9 @@ cue matrix-style terminal outputs. You can review your ArcGIS Pro using the step
 
 This might be an excellent part to jump-cut back to, why I think it's possible to use `R` in an ArcGIS Pro Notebook.
 
-An ArcGIS Notebook is a Jupyter Notebook. And while most people just think, Jupyter Notebook == much cooler than running code in a terminal. What you might not know, is that Project Jupyter is an open-source project designed to support `JU`lia `PY`thon and `R`. Naturally, one might expect that Julia and R could just be spun up in any old Notebook. And naturally, you'd be wrong.\
+An ArcGIS Notebook is a Jupyter Notebook. And while most people just think, Jupyter Notebook == much cooler than running code in a terminal. What you might not know, is that Project Jupyter is an open-source project designed to support `JU`lia `PY`thon and `R`. Naturally, one might expect that Julia and `R` could just be spun up in any old Notebook. And naturally, you'd be wrong.\
 
-At least in Esri-landia. No Julia kernel. No R kernel.\
+At least in Esri-landia. No Julia kernel. No `R` kernel.\
 Fine fine.\
 But.\
 What about some... ...Notebook Magic?
@@ -269,7 +269,7 @@ You can use the arcgis pro package manager to add `rpy2` into a cloned `arcgispr
 
 Whatever.\
 We didn't want it updated anyway.\
-Let's just follow the `rp2` documentation and unpack that sweet sweet `R` magic.\
+Let's just follow the `rpy2` documentation and unpack that sweet sweet `R` magic.\
 We'll open an ArcGIS Notebook.
 
 > Step 1
@@ -347,10 +347,9 @@ A very careful reading of the above will show that, these paths, are not the con
 `C:\Users\feralcatcolonist\AppData\Local\ESRI\conda\envs\arcgispro-py3-rpy2\Lib\site-packages`
 
 We see a few differences.\
-And maybe, we want to ask why?\
-But we won't.
+And maybe, we want to ask why?
 
-It's `pip` stuff okay!? There's some API shenanigans that happened around this time in the `rpy2` library. No I haven't tested it in ArcGIS Pro 3.7. I guess I can. Really this is just the never-ending story of, something may or may not be broken in every single version of ArcGIS Pro requiring some kind of hacky monkey patch to fix.
+If you look at the `conda` version of `rpy2` we see that it is version `3.5.11`, the `pip` version of `rpy2` is `3.6.8`; `R` changed some of its internals and removed a `C` function `Rf_findVarInFrame` that `rpy2` was dependent on. In the `3.6.x` version of `rpy2` it begins using public `C` API endpoints. Really this is just the never-ending story of `conda` dependency hell, something may or may not be broken in every single version of ArcGIS Pro requiring some kind of hacky monkey patch to fix.
 
 ### you don't need a license to [copy-paste] a sandwich
 
@@ -407,16 +406,147 @@ arcgis_packages(include_self = TRUE) # perhaps, the R ArcGIS [Foot] Bridge
 
 And there you have it.
 
-![](/img/posts/2026-10-07-r-in-arcgis-notebook-rainbow.gif){fig-alt="Spongebob imagination meme, the phrase, R in an ArcGIs Notebook is superimposed over the rainbow"}
+![](/img/posts/2026-10-07-r-in-arcgis-notebook-rainbow.gif){fig-alt="Spongebob imagination meme, the phrase, R in an ArcGIS Notebook is superimposed over the rainbow"}
 
-So what's the logical next step? Probably an entire series of using the R ArcGIS Bridge.
-
-![](/img/posts/2026-10-07-several-song-filled-hours-later.webp){fig-alt="Several Song Filled Hours Later"}
+So what's the logical next step? Probably an entire series of using the `R ArcGIS Bridge`.
 
 But first. I have some pixies to catch.
 
-## Further Reading
-- Aydin, O., Pavlushko, D., Walbridge, S., Kopp, S., & Janikas, M. V. 2024. "arcgisbinding: An R package for integrating R and ArcGIS." Environmental Modelling & Software 172: 105904. <https://doi.org/10.1016/j.envsoft.2023.105904>
+## further reading
+- Aydin, O., Pavlushko, D., Walbridge, S., Kopp, S., & Janikas, M. V. 2024. "arcgisbinding: An R package for integrating R and ArcGIS." *Environmental Modelling & Software 172*: 105904. <https://doi.org/10.1016/j.envsoft.2023.105904>
 - R-ArcGIS Bridge, Esri documentation <https://developers.arcgis.com/r-bridge/>
-- Introduction to the R-ArcGIS Bridge, Esri Academy<https://www.esri.com/en-us/training/catalog/67fe7b30a930b8d1449f4e28/introduction-to-the-rarcgis-bridge>
+- Introduction to the R-ArcGIS Bridge, Esri Academy <https://www.esri.com/en-us/training/catalog/67fe7b30a930b8d1449f4e28/introduction-to-the-rarcgis-bridge>
 - documentation for rpy2 <https://rpy2.github.io/doc/latest/html/index.html#>
+- Jupyter magic <https://ipython.readthedocs.io/en/stable/interactive/magics.html>
+
+![](/img/posts/2026-10-07-r-you-ready-kids.jpg){fig-alt="A satirical OReilly Programming book cover. Title: R You Ready Kids?; Subtitle: If ArcGIS Notebooks Be Something You Wish; Authors: feral cat colonist & garbage panda trifecta"}
+
+## addendum
+
+> "No one can change a person, but [ArcGIS Pro] can be a reason for that person to change."
+
+### what about ArcGIS Pro 3.7.x
+
+In typical feral fashion, I was immediately unhappy that I didn't provide any information on the latest long term support release of ArcGIS Pro 3.7.x. So I went ahead and walked through that process to see how different it ended up being (see `conda` hell comment above).
+
+So.
+
+Working through ArcGIS Pro 3.7.3 (the latest patch as of 20261016), was also... ...fun.
+
+- the `Clone...` button is broken, so trying to clone `arcgispro-py3` will fail
+- the `Clone (Online)...` option is not broken, so you can clone `arcgispro-py3` with that
+    - you'll use the `...` button to the right of the environment name instead of the clone icon
+    - I called this one `arcgispro-py3-37-rpy2` because I have no imagination
+- acivate the new environment
+- install `rpy2` package in the new cloned environment
+
+![](/img/posts/2026-10-07-several-song-filled-hours-later.webp){fig-alt="Several Song Filled Hours Later"}
+
+- the `rpy2` package install will fail
+
+```
+Pins seem to be involved in the conflict. Currently pinned specs:
+
+- mkl==2024.2.2=arcgispro_15 (labeled as 'pin-1')
+- python=3.13 (labeled as 'pin-2')
+- protobuf=5.29.5 (labeled as 'pin-3')
+- pro_notebook_integration=3.7 (labeled as 'pin-4')
+- pillow=12.2 (labeled as 'pin-5')
+- numpy=2.3 (labeled as 'pin-6')
+- notebook=7 (labeled as 'pin-7')
+- netcdf4=1.7.3 (labeled as 'pin-8')
+- matplotlib=3.10.8 (labeled as 'pin-9')
+- h5py=3.15.1 (labeled as 'pin-10')
+- gdal=3.12.2 (labeled as 'pin-11')
+- freetype=2.13 (labeled as 'pin-12')
+- arcpy-base=3.7 (labeled as 'pin-13')
+- arcpy=3.7 (labeled as 'pin-14')
+- arcgispro=3.7 (labeled as 'pin-15')
+- arcgis=2.4 (labeled as 'pin-16')
+```
+
+- swe can try some more `conda` outside of the ArcGIS Pro GUI here:
+    - `C:\Program Files\ArcGIS\Pro\bin\Python\Scripts\proenv.bat`
+    - do I expect a different outcome? no. but I want to be sure.
+    - `conda install -c esri rpy2`
+    - failed solve, but without the helpful pinned specs message from above
+- now we can try `pip` from inside of the GUI
+    - just like earlier, we'll run it inside of an ArcGIS Notebook
+    - and what's really interesting, is that ArcGIS Pro is failing to detect a kernel entirely after opening an ArcGIS Notebook
+- so it looks like `Clone (Online)...` is also broken, or at least broken enough to not let ArcGIS Pro detect the currently running kernel from within an ArcGIS Notebook
+
+Now we get to "clone" the `arcgispro-py3` in the hackiest way\
+copy-paste the full directory\
+We do this here:
+
+> `C:\Program Files\ArcGIS\Pro\bin\Python\envs`
+
+we copy `arcgispro-py3/`\
+and paste and rename the copy as `arcgispro-py3-37-rpy2/` here:
+
+> `C:\Users\feralcatcolonist\AppData\Local\ESRI\conda\envs\arcgispro-py3-37-rpy2/`
+
+:::{.callout-note}
+The reason why we want to copy it into our user folder is to avoid any C-drive writes. It complicates things if you don't have admin access to your workstation, so best to just avoid it altogether.
+:::
+
+So *this* copy of the kernel does work in an ArcGIS Notebook.\
+Yay.\
+Back to... ...`conda`?\
+
+That's right.
+
+We can't trust that our previous `conda` attempt wasn't tainted by whatever happened based on the botched `Clone (Online)...`
+
+So let's go ahead and:
+
+- `C:\Program Files\ArcGIS\Pro\bin\Python\Scripts\proenv.bat`
+- `conda install -c esri rpy2`
+
+```
+The following packages will be REMOVED:
+
+  arcpy-3.7-py313_arcgispro_1818
+  arcpy-base-3.7-py313_1818
+```
+
+In case you're wondering, we're not going to get very far in ArcGIS Pro without `arcpy`.\
+So, uh, `pip`?
+
+![](/img/posts/2026-10-07-pip.gif){fig-alt="Eldorado Both meme, pip is superimposed over both"}
+
+From the terminal accessed through the `proenv.bat` we can use:
+
+- `pip install rpy2`
+
+Or we can activate the cloned environment within ArcGIS Pro and open an ArcGIS Notebook:
+
+```python
+%pip install rpy2
+#Successfully installed rpy2-3.6.9 rpy2-rinterface-3.6.7 rpy2-robjects-3.6.6 tzlocal-5.4.4
+#Note: you may need to restart the kernel to use updated packages.
+```
+
+and it looks good.
+
+```python
+%load_ext rpy2.ipython
+#Error importing in API mode: ModuleNotFoundError("No module named '_rinterface_cffi_api'")
+#Trying to import in ABI mode.
+```
+
+when we load the `rpy2` extension we get a nice little warning message about API mode failing and retrying in ABI mode. Unfortunately, we don't get a success message for switching over to ABI mode. Which is confusing, because on first glance, it looks like this is just another failed run.
+
+However, when we run the cell again, it says that it's already loaded.
+
+```python
+%%R
+gimme_esri <- c("arcgisbinding", "arcgis")
+lapply(gimme_esri, library,character.only = TRUE)
+print(arc.check_product())
+arcgis_packages(include_self = TRUE)
+```
+
+And there we have it, our `R` demo cells work.
+
+So. Somehow getting `R` to work inside of ArcGIS Pro 3.7.x is both less complicated and more frustrating than it was in ArcGIS Pro 3.5.x. Neat. 
