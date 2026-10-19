@@ -13,7 +13,7 @@ about:
       href: https://linkedin.com/in/jordancarmona
 ---
 
-> Enjoys an array of `[ukulele, gardening, programming, photography, kaiju, coffee, cats]`.
+# Enjoys an array of `[ukulele, gardening, programming, photography, kaiju, coffee, cats]`.
 
 Jordan Carmona is a mythical cryptid living in the Pacific Northwest. He wishes he had a tidy job title.
 On any given day he does data engineering, devops & infrastructure as code, database administration & tuning,
@@ -29,4 +29,6 @@ board member and officer for GPN Texas, and perennial lurker on the GIS Discord 
 History and Political Science from the University of North Texas.
 His alignment is Chaotic Good.
 
-> A [Tom] of all trades, master of one -> curiosity
+# A [Tom] of all trades, master of one -> curiosity
+
+[My resume](https://github.com/FeralCatColonist/feralcatcolonist.github.io/releases/download/site-assets/resume.pdf)

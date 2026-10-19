@@ -4,6 +4,14 @@ subtitle: "Conference talks and presentations."
 title-block-banner: true
 ---
 
+## Novel Technologies: A Process for You and Others
+
+GPN Texas, formerly URISA Texas · 2020
+
+{{< video https://www.youtube.com/watch?v=1-lpzb6rvW0 >}}
+
+On using drones and a downtown parking study.
+
 ## More than Just Maps
 
 Episodes 13 & 14 · 2020
