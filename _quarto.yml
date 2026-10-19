@@ -29,9 +29,9 @@ website:
       - icon: github
         href: https://github.com/feralcatcolonist
         aria-label: GitHub
-      - icon: twitter-x
-        href: https://twitter.com/feralcatcolonist
-        aria-label: Twitter
+      - icon: linkedin
+        href: https://linkedin.com/in/jordancarmona
+        aria-label: LinkedIn
   page-footer:
     center: "© The Feral Cat Colonist"
 
