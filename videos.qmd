@@ -4,6 +4,38 @@ subtitle: "Conference talks and presentations."
 title-block-banner: true
 ---
 
+## More than Just Maps
+
+Episodes 13 & 14 · 2020
+
+My voice is not usually so dark and gravelly, I was just sick.
+
+{{https://www.youtube.com/watch?v=vT9IPfxEQm8}}
+
+On my career trajectory, local government, and the GISP.
+
+> Just about anything that I think is interesting, we end up being able to do. 
+
+{{https://www.youtube.com/watch?v=55cdmOVjRPE}}
+
+More GISP.
+
+> I wish that was the kind of bedtime advice my parents gave me, "the world doesn't care about you."
+
+## Out of Order
+
+Texas GIS Forum · 2019
+
+My voice is not usually so dark and gravelly, I was just sick.
+
+{{https://www.youtube.com/watch?v=8rlKqqsDvI4}}
+
+> Well, that doesn't really flow with the Outrun vibe we're going for.\
+> So we're going to engage in some revisionist history and say that Arcade was named for the 1980s phenonenom. 
+
+An outrun-themed presentation on the ArcGIS Arcade expression language. A short walkthrough:\
+code examples on altering data formatting, conditional logic, and symbolization derived from complex values.
+
 <!--
 HOW TO ADD A VIDEO
 Copy this block, uncomment it, and paste the full YouTube URL into the video shortcode:

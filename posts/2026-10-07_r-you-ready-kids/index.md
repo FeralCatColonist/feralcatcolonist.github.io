@@ -465,7 +465,7 @@ Pins seem to be involved in the conflict. Currently pinned specs:
 - arcgis=2.4 (labeled as 'pin-16')
 ```
 
-- swe can try some more `conda` outside of the ArcGIS Pro GUI here:
+- we can try some more `conda` outside of the ArcGIS Pro GUI here:
     - `C:\Program Files\ArcGIS\Pro\bin\Python\Scripts\proenv.bat`
     - do I expect a different outcome? no. but I want to be sure.
     - `conda install -c esri rpy2`
@@ -475,16 +475,16 @@ Pins seem to be involved in the conflict. Currently pinned specs:
     - and what's really interesting, is that ArcGIS Pro is failing to detect a kernel entirely after opening an ArcGIS Notebook
 - so it looks like `Clone (Online)...` is also broken, or at least broken enough to not let ArcGIS Pro detect the currently running kernel from within an ArcGIS Notebook
 
-Now we get to "clone" the `arcgispro-py3` in the hackiest way\
-copy-paste the full directory\
-We do this here:
+Now we get to "clone" the `arcgispro-py3` in the hackiest way possible: copy-paste the full directory. We do this here:
 
 > `C:\Program Files\ArcGIS\Pro\bin\Python\envs`
 
-we copy `arcgispro-py3/`\
-and paste and rename the copy as `arcgispro-py3-37-rpy2/` here:
+Copy `arcgispro-py3/`\
+and paste here:
 
-> `C:\Users\feralcatcolonist\AppData\Local\ESRI\conda\envs\arcgispro-py3-37-rpy2/`
+> `C:\Users\feralcatcolonist\AppData\Local\ESRI\conda\envs`
+
+and rename the copy as `arcgispro-py3-37-rpy2/` 
 
 :::{.callout-note}
 The reason why we want to copy it into our user folder is to avoid any C-drive writes. It complicates things if you don't have admin access to your workstation, so best to just avoid it altogether.
@@ -510,8 +510,7 @@ The following packages will be REMOVED:
   arcpy-base-3.7-py313_1818
 ```
 
-In case you're wondering, we're not going to get very far in ArcGIS Pro without `arcpy`.\
-So, uh, `pip`?
+In case you're wondering, we're not going to get very far in ArcGIS Pro without `arcpy`. So, uh, `pip`?
 
 ![](/img/posts/2026-10-07-pip.gif){fig-alt="Eldorado Both meme, pip is superimposed over both"}
 
@@ -519,7 +518,7 @@ From the terminal accessed through the `proenv.bat` we can use:
 
 - `pip install rpy2`
 
-Or we can activate the cloned environment within ArcGIS Pro and open an ArcGIS Notebook:
+Or we can open ArcGIS Pro, activate the cloned environment, restart ArcGIS Pro, and open an ArcGIS Notebook:
 
 ```python
 %pip install rpy2

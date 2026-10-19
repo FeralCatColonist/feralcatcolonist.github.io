@@ -13,6 +13,20 @@ about:
       href: https://twitter.com/feralcatcolonist
 ---
 
-Likes an array of [Cats, Coffee, Gardening, Photography, Ukulele].
+> Enjoys an array of `[ukulele, gardening, programming, photography, kaiju, coffee, cats]`.
 
-<!-- Write your bio here. -->
+Jordan Carmona is a mythical cryptid living in the Pacific Northwest. He wishes he had a tidy job title.\
+On any given day he does data engineering, devops & infrastructure as code, database administration & tuning,\
+distributed computing and (big) data analytics, programming, and sometimes cartography.\
+
+He began working professionally in 2014 and has worked in a variety of sectors:\
+private consulting, municipal government, and retail. Jordan is a self-taught developer,\
+Part 107 sUAS remote pilot, and certified GISP. He has experience in the entire vertical of geospatial systems,\
+from data digitization and GNSS field collection to analytics, automations, administration, and managing a geospatial department.\
+
+His professional involvement with the industry includes a term on the Geospatial Professional Network (GPN) Vanguard Cabinet,\
+board member and officer for GPN Texas, and perennial lurker on the GIS Discord group. Jordan has a dual BA in\
+History and Political Science from the University of North Texas.\
+His alignment is Chaotic Good.
+
+> A [Tom] of all trades, master of one -> curiosity
